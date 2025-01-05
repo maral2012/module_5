@@ -124,6 +124,8 @@
 # name = "\tEric Matthes\n"
 # print("Unmodified:")
 # print(name)
+
+
 # print("\nUsing lstrip():")
 # print(name.lstrip())
 # print("\nUsing rstrip():")
@@ -235,3 +237,105 @@
 
 # players = [ 'charles', 'martina', 'michael', 'florence' , 'eli']
 # print(players[-3:])
+
+# players = ['charles', 'martina', 'michael', 'florence', 'eli']
+# print("Here are the first three players on my team:")
+# for player in players[:3]:
+#     print(player.title())
+
+# my_foods = ['pizza', 'falafel', 'carrot cake']
+# friend_foods = my_foods[:]
+# print("My favorite foods are:")
+# print(my_foods)
+# print("\nMy friend's favorite foods are:")
+# print(friend_foods)
+
+# dimensions = (200, 50)
+# print(dimensions[0])
+# print(dimensions[1])
+
+# dimensions = (200, 50)
+# for dimension in dimensions:
+#     print(dimension)
+
+# dimensions = (200, 50)
+# print("Original dimensions:")
+# for dimension in dimensions:
+#     print(dimension)
+
+# dimensions = (400, 100)
+# print("\nModified dimensions:")
+# for dimension in dimensions:
+#     print(dimension)
+
+# menu = ('салат', 'малат', 'кофе', 'чай', 'сыр')
+# for bluda in menu:
+#     print(bluda)
+# print('New menu:')
+# menu = ('салат', 'шоколад', 'кофе', 'мясо', 'сыр')
+# for bluda in menu:
+#     print(bluda)
+
+# def vuch(x,y):
+#     z = x + y
+#     return (z)
+# a = vuch(1,2)
+# b = vuch(3,4)
+# c = vuch(5,6)
+# d = a + b + c
+# print(d)
+
+
+# filename =  'python_notes.txt'
+# print(filename.removesuffix('.txt'))
+
+
+# bicycles = [ 'trek', 'cannondale', 'redline', 'specialized']
+# print(bicycles[1], bicycles[2])
+# print(bicycles[3])
+
+
+# bicycles = [ 'trek', 'cannondale', 'redline', 'specialized']
+# message = f"My first bicycle was а {bicycles [0]. title()}."
+# print(message)
+
+
+# motorcycles = [ 'honda', 'yamaha', 'suzuki']
+# print(motorcycles)
+# del motorcycles[0]
+# print(motorcycles)
+
+
+# motorcycles = [ 'honda', 'yamaha', 'suzuki']
+# print(motorcycles)
+# popped_motorcycle = motorcycles.pop()
+# print(motorcycles)
+# print(popped_motorcycle)
+
+
+# motorcycles = ['honda', 'уа111~:1а', 'sш:uki']
+# first_owned = motorcycles.pop(0)
+# print(f"The first motorcycle I owned was а {first_owned.title()}.")
+
+
+# motorcycles = ['honda', 'yamaha', 'suzuki']
+# motorcycles.insert(1, 'ducati')
+# print(motorcycles)
+
+class House:
+    def __init__(self, name, number):
+        self.name = name
+        self.number_of_floors = number
+
+    def go_to(self, new_floor):
+        floor = 0
+        if new_floor < 1 or new_floor > self.number_of_floors:
+            print('Такого экажа не существует')
+        else:
+            for floor in range(new_floor):
+                print(floor + 1)
+h1 = House('ЖК Горский', 18)
+h1.go_to(5)
+
+h2 = House('Домик в деревне', 2)
+h2.go_to(10)
