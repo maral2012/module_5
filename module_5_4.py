@@ -1,7 +1,7 @@
 class House:
-    houses_history = []     # атрибут будет хранить названия созданных объектов
+    houses_history = []
 
-    def __new__(cls, *args, **kwargs): # ,*args, **kwargs
+    def __new__(cls, *args, **kwargs):
         cls.houses_history.append(args[0])
         return super().__new__(cls)
 
@@ -15,11 +15,11 @@ class House:
        title = str(f'Название: {self.name}, кол-во этажей: {self.number_of_floors}')
        return title
 
-    def __eq__(self, other):    # 1
+    def __eq__(self, other):
         if isinstance(other.number_of_floors, int) and isinstance(other, House):
             return self.number_of_floors == other.number_of_floors
 
-    def __lt__(self, other):    # 2
+    def __lt__(self, other):
         if isinstance(other.number_of_floors, int) and isinstance(other, House):
             return self.number_of_floors < other.number_of_floors
 
